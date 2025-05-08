@@ -36,15 +36,15 @@ const data = {
   teams: [
     {
       name: 'InnovaCraft',
-      logo: 'https://res.cloudinary.com/dlzlfasou/image/upload/v1741345507/logo-01_kp2j8x.png',
+      logo: '/logoipsum-368.svg',
     },
     {
       name: 'Acme Corp.',
-      logo: 'https://res.cloudinary.com/dlzlfasou/image/upload/v1741345507/logo-01_kp2j8x.png',
+      logo: '/logoipsum-368.svg',
     },
     {
       name: 'Evil Corp.',
-      logo: 'https://res.cloudinary.com/dlzlfasou/image/upload/v1741345507/logo-01_kp2j8x.png',
+      logo: '/logoipsum-368.svg',
     },
   ],
   navMain: [
@@ -129,7 +129,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                       >
                         {item.icon && (
                           <item.icon
-                            className="text-brand-11 group-data-[active=true]/menu-button:text-white-a12"
+                            className="text-brand-12 group-data-[active=true]/menu-button:text-white-a12"
                             size={22}
                             aria-hidden="true"
                           />

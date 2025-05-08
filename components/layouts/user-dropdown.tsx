@@ -60,23 +60,6 @@ export default function UserDropdown() {
           <RiLogoutBoxLine size={16} className="opacity-60" aria-hidden="true" />
           <span>Sign out</span>
         </DropdownMenuItem>
-
-        <DropdownMenuSeparator />
-        <DropdownMenuLabel className="DropdownMenuLabel">People</DropdownMenuLabel>
-        <DropdownMenuRadioGroup value={person} onValueChange={setPerson}>
-          <DropdownMenuRadioItem className="DropdownMenuRadioItem" value="pedro">
-            <DropdownMenuItemIndicator className="DropdownMenuItemIndicator">
-              <DotFilledIcon />
-            </DropdownMenuItemIndicator>
-            Pedro Duarte
-          </DropdownMenuRadioItem>
-          <DropdownMenuRadioItem className="DropdownMenuRadioItem" value="colm">
-            <DropdownMenuItemIndicator className="DropdownMenuItemIndicator">
-              <DotFilledIcon />
-            </DropdownMenuItemIndicator>
-            Colm Tuite
-          </DropdownMenuRadioItem>
-        </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>
   )

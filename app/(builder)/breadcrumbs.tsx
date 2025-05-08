@@ -1,4 +1,4 @@
-import { DatabaseIcon } from 'lucide-react'
+import { FileDashed } from '@phosphor-icons/react'
 
 import {
   Breadcrumb,
@@ -20,7 +20,7 @@ export default function Breadcrumbs() {
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink href="#">Databases</BreadcrumbLink>
+          <BreadcrumbLink href="#">McKinsey Academy</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
@@ -31,14 +31,14 @@ export default function Breadcrumbs() {
               aria-label="Select database"
             >
               <div className="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 group-has-[select[disabled]]:opacity-50">
-                <DatabaseIcon size={16} aria-hidden="true" />
+                <FileDashed weight="duotone" size={20} aria-hidden="true" />
               </div>
               <SelectValue placeholder="Select database" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="1">Orion</SelectItem>
-              <SelectItem value="2">Sigma</SelectItem>
-              <SelectItem value="3">Dorado</SelectItem>
+              <SelectItem value="1">Problem Statement Worksheet</SelectItem>
+              <SelectItem value="2">Issue Tree Worksheet</SelectItem>
+              <SelectItem value="3">Value Driver Tree Worksheet</SelectItem>
             </SelectContent>
           </Select>
         </BreadcrumbItem>
