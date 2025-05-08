@@ -1,9 +1,10 @@
-'use client'
+"use client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Filter, Plus, MoreVertical, ChevronDown } from "lucide-react";
 import { useState } from "react";
-import { Badge  } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 export default function Worksheets() {
   const [selectedDocument, setSelectedDocument] = useState("client-design");
@@ -49,24 +50,26 @@ export default function Worksheets() {
               }`}
               onClick={() => setSelectedDocument("patient-form")}
             >
-              <CardContent className="p-0">
-                <div className="relative">
-                  <img
-                    src="/medical-form-page-1.png"
-                    alt="Patient Health Form"
-                    className="w-full h-40 object-cover object-top rounded-t-lg"
-                  />
-                  <div className="absolute top-0 right-0 left-0 h-12 bg-gradient-to-b from-black/50 to-transparent rounded-t-lg">
-                    <div className="p-2">
-                      <img
-                        src="/formflow-logo.png"
-                        alt="Logo"
-                        className="h-6"
-                      />
+              <Link href="/worksheets/patient-form">
+                <CardContent className="p-0">
+                  <div className="relative">
+                    <img
+                      src="/medical-form-page-1.png"
+                      alt="Patient Health Form"
+                      className="w-full h-40 object-cover object-top rounded-t-lg"
+                    />
+                    <div className="absolute top-0 right-0 left-0 h-12 bg-gradient-to-b from-black/50 to-transparent rounded-t-lg">
+                      <div className="p-2">
+                        <img
+                          src="/formflow-logo.png"
+                          alt="Logo"
+                          className="h-6"
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </CardContent>
+                </CardContent>
+              </Link>
               <CardFooter className="flex justify-between items-center p-3">
                 <div>
                   <h3 className="font-medium">Patient Health Form</h3>

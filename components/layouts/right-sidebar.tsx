@@ -10,10 +10,7 @@ export const RightSidebar = () => {
 
   return (
     <div>
-      {/* Right Sidebar - Document Details */}
-      {activePage === "worksheets" && (
-        <div className="w-80 border-l">
-          <div className="p-4 border-b">
+       <div className="p-4 border-b">
             <h2 className="font-medium">Client Contract Template</h2>
             <p className="text-xs text-gray-500">Last edited 2 days ago</p>
           </div>
@@ -134,8 +131,6 @@ export const RightSidebar = () => {
               Edit Worksheet
             </Button>
           </div>
-        </div>
-      )}
     </div>
   );
 };

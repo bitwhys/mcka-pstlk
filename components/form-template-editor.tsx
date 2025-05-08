@@ -422,7 +422,7 @@ export default function FormTemplateEditor() {
   )
 }
 
-function ChevronRight(props) {
+function ChevronRight(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

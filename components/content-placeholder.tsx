@@ -2,9 +2,9 @@ import { cn } from '@/lib/utils'
 
 export const ContentPlaceholder = ({ className }: { className?: string }) => {
     return (
-      <div className={cn("relative h-full overflow-hidden rounded bg-gray-50 dark:bg-dark-tremor-background-subtle", className)}>
+      <div className={cn("relative h-full overflow-hidden rounded bg-gray-3 dark:bg-dark-tremor-background-subtle", className)}>
         <svg
-          className="absolute inset-0 h-full w-full stroke-gray-200 dark:stroke-gray-700"
+          className="absolute inset-0 h-full w-full stroke-gray-6 dark:stroke-gray-700"
           fill="none"
         >
           <defs>
