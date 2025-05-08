@@ -1,6 +1,6 @@
 "use client"
 
-import {DocumentDashboard} from "@/components/document-dashboard"
+import {DocumentDashboard} from "@/app/(builder)/layout"
 
 export default function Page() {
   return <DocumentDashboard />

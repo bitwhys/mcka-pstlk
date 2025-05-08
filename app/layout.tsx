@@ -26,14 +26,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full bg-gray-3">
+    <html lang="en" className="h-full bg-page-background">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} h-full antialiased bg-gray-3`}
+        className={`${geistSans.variable} ${geistMono.variable} h-full antialiased bg-page-background`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
-          // enableSystem
+          defaultTheme="system"
+          enableSystem
           disableTransitionOnChange
         >
           {children}
