@@ -11,6 +11,9 @@
     "components": "pnpm dlx shadcn@latest add"
   },
   "dependencies": {
+    "@fontsource-variable/newsreader": "^5.2.7",
+    "@fontsource-variable/plus-jakarta-sans": "^5.2.5",
+    "@fontsource/ibm-plex-serif": "^5.2.5",
     "@headlessui/react": "^2.2.2",
     "@heroicons/react": "^2.2.0",
     "@radix-ui/colors": "^3.0.0",

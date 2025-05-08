@@ -5,6 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-sans: "Plus Jakarta Sans Variable", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -55,6 +56,19 @@
   --color-gray-11: var(--slate-11);
   --color-gray-12: var(--slate-12);
 
+  --color-black-a1: var(--black-a1);
+  --color-black-a2: var(--black-a2);
+  --color-black-a3: var(--black-a3);
+  --color-black-a4: var(--black-a4);
+  --color-black-a5: var(--black-a5);
+  --color-black-a6: var(--black-a6);
+  --color-black-a7: var(--black-a7);
+  --color-black-a8: var(--black-a8);
+  --color-black-a9: var(--black-a9);
+  --color-black-a10: var(--black-a10);
+  --color-black-a11: var(--black-a11);
+  --color-black-a12: var(--black-a12);
+
   --color-indigo-1: var(--indigo-1);
   --color-indigo-2: var(--indigo-2);
   --color-indigo-3: var(--indigo-3);
@@ -79,7 +93,7 @@
   --popover: oklch(1 0 0); /* --color-white */
   --popover-foreground: var(--slate-12); /* --color-zinc-950 */
   /* --primary: oklch(0.21 0.006 285.885); --color-zinc-900 */
-  --primary: #11131F; /* dark indigo-1 */
+  --primary: #11131f; /* dark indigo-1 */
   /* --primary-foreground: oklch(0.985 0 0); --color-zinc-50 */
   --primary-foreground: var(--slate-1); /* --color-zinc-50 */
   --secondary: var(--slate-4); /* --color-zinc-100 */
@@ -115,7 +129,6 @@
   --card: #111111; /* --color-zinc-950 */
   --card-foreground: var(--slate-1); /* --color-zinc-50 */
 }
-
 
 @layer base {
   * {

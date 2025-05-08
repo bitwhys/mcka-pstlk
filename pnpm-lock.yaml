@@ -8,6 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/newsreader':
+        specifier: ^5.2.7
+        version: 5.2.7
+      '@fontsource-variable/plus-jakarta-sans':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/ibm-plex-serif':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@headlessui/react':
         specifier: ^2.2.2
         version: 2.2.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -423,6 +432,15 @@ packages:
 
   '@floating-ui/utils@0.2.9':
     resolution: {integrity: sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==}
+
+  '@fontsource-variable/newsreader@5.2.7':
+    resolution: {integrity: sha512-foqMW/uuhfasHe68chFgnne4fGEOvfVjT+tIV6zZZ3hwMrtFPM9q8O79KbyHC1dg2LQunpld4efm2OMZH0Kr3g==}
+
+  '@fontsource-variable/plus-jakarta-sans@5.2.5':
+    resolution: {integrity: sha512-nkAWzq+QWBSK+52HIlNCyoh5YXrZ/AwV1OqzxZz6VnPmsIpU68B1bf1YT8heRAJKY1kXNtWIJ9jJMYVaStgf+w==}
+
+  '@fontsource/ibm-plex-serif@5.2.5':
+    resolution: {integrity: sha512-0YyDEmqIqlMnPF/k1974zAJWjM9FNCg0TIYa9z6+W4koPmYf5llcOv6pqZK19zE/MnNxAJW0K18i5TEJE841YQ==}
 
   '@headlessui/react@2.2.2':
     resolution: {integrity: sha512-zbniWOYBQ8GHSUIOPY7BbdIn6PzUOq0z41RFrF30HbjsxG6Rrfk+6QulR8Kgf2Vwj2a/rE6i62q5vo+2gI5dJA==}
@@ -2516,6 +2534,12 @@ snapshots:
       tabbable: 6.2.0
 
   '@floating-ui/utils@0.2.9': {}
+
+  '@fontsource-variable/newsreader@5.2.7': {}
+
+  '@fontsource-variable/plus-jakarta-sans@5.2.5': {}
+
+  '@fontsource/ibm-plex-serif@5.2.5': {}
 
   '@headlessui/react@2.2.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
