@@ -1,6 +1,6 @@
-"use client";
+'use client'
 
-import { useState } from "react";
+import { useState } from 'react'
 import {
   ChevronLeft,
   MoreHorizontal,
@@ -11,30 +11,25 @@ import {
   Plus,
   Minus,
   X,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { LeftSidebar } from "@/components/layouts/left-sidebar";
-import { RightSidebar } from "@/components/layouts/right-sidebar";
-import { Card, CardContent } from "@/components/ui/card";
-import { useRouter } from "next/navigation";
-import Breadcrumbs from "./breadcrumbs";
+} from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { LeftSidebar } from '@/components/layouts/left-sidebar'
+import { RightSidebar } from '@/components/layouts/right-sidebar'
+import { Card, CardContent } from '@/components/ui/card'
+import { useRouter } from 'next/navigation'
+import Breadcrumbs from './breadcrumbs'
 
 export default function WorksheetsPage() {
-  const [activeTab, setActiveTab] = useState("pages");
-  const [zoom, setZoom] = useState(50);
-  const router = useRouter();
+  const [activeTab, setActiveTab] = useState('pages')
+  const [zoom, setZoom] = useState(50)
+  const router = useRouter()
 
   return (
     <div className="flex h-full flex-col overflow-hidden">
       <header className="shrink-0 border-b">
         <div className="flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="h-8 w-8"
-              onClick={() => router.back()}
-            >
+            <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => router.back()}>
               <ChevronLeft className="h-4 w-4" />
             </Button>
             {/* <div className="flex items-center gap-2">
@@ -45,7 +40,7 @@ export default function WorksheetsPage() {
 
           <Breadcrumbs />
           <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-gray-100">
+            <div className="flex items-center gap-1 rounded-full bg-gray-100 px-2 py-1">
               <span className="h-2 w-2 rounded-full bg-gray-400"></span>
               <span className="text-sm text-gray-600">Draft</span>
             </div>
@@ -64,16 +59,16 @@ export default function WorksheetsPage() {
           </div>
         </div>
       </header>
-      <div className="flex-1 h-full flex w-full items-start">
-        <aside className="sticky top-8 border-r hidden w-64 shrink-0 lg:block">
+      <div className="flex h-full w-full flex-1 items-start">
+        <aside className="sticky top-8 hidden w-64 shrink-0 border-r lg:block">
           {/* Left column area */}
           <LeftSidebar />
         </aside>
-        <section className="flex-1 bg-gray-4 h-full relative p-4 pb-8 overflow-auto">
+        <section className="bg-gray-4 relative h-full flex-1 overflow-auto p-4 pb-8">
           {/* Main area */}
           {/* <ContentPlaceholder className="h-96" /> */}
-          <div className="flex justify-center mb-4">
-            <div className="bg-white rounded-md shadow-sm flex items-center">
+          <div className="mb-4 flex justify-center">
+            <div className="flex items-center rounded-md bg-white shadow-sm">
               <Button variant="ghost" className="rounded-r-none border-r">
                 <span>Image</span>
                 <ChevronDown className="ml-2 h-4 w-4" />
@@ -92,65 +87,56 @@ export default function WorksheetsPage() {
 
           <Card className="mx-auto max-w-3xl">
             <CardContent>
-              <div className="text-center mb-4">
-                <h2 className="text-lg font-bold">
-                  NEW PATIENT HEALTH HISTORY FORM
-                </h2>
-                <p className="text-xs mt-2">
-                  All questions contained in this questionnaire are strictly
-                  confidential
+              <div className="mb-4 text-center">
+                <h2 className="text-lg font-bold">NEW PATIENT HEALTH HISTORY FORM</h2>
+                <p className="mt-2 text-xs">
+                  All questions contained in this questionnaire are strictly confidential
                   <br />
                   and will become part of your medical record
                 </p>
               </div>
 
-              <div className="border rounded-md mb-4">
+              <div className="mb-4 rounded-md border">
                 <table className="w-full text-xs">
                   <tbody>
                     <tr className="border-b">
-                      <td className="border-r p-1 w-1/4 font-medium">Name:</td>
-                      <td className="border-r p-1 w-1/2">
-                        (Last, First, M.I.):
-                      </td>
-                      <td className="p-1 w-1/4 font-medium">DOB:</td>
+                      <td className="w-1/4 border-r p-1 font-medium">Name:</td>
+                      <td className="w-1/2 border-r p-1">(Last, First, M.I.):</td>
+                      <td className="w-1/4 p-1 font-medium">DOB:</td>
                     </tr>
                     <tr className="border-b">
-                      <td className="border-r p-1 font-medium">
-                        Marital status:
-                      </td>
+                      <td className="border-r p-1 font-medium">Marital status:</td>
                       <td className="border-r p-1" colSpan={2}>
                         <div className="flex flex-wrap gap-4">
                           <div className="flex items-center gap-1">
-                            <div className="w-3 h-3 border"></div>
+                            <div className="h-3 w-3 border"></div>
                             <span>Single</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <div className="w-3 h-3 border"></div>
+                            <div className="h-3 w-3 border"></div>
                             <span>Partnered</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <div className="w-3 h-3 border"></div>
+                            <div className="h-3 w-3 border"></div>
                             <span>Married</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <div className="w-3 h-3 border"></div>
+                            <div className="h-3 w-3 border"></div>
                             <span>Separated</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <div className="w-3 h-3 border"></div>
+                            <div className="h-3 w-3 border"></div>
                             <span>Divorced</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <div className="w-3 h-3 border"></div>
+                            <div className="h-3 w-3 border"></div>
                             <span>Widowed</span>
                           </div>
                         </div>
                       </td>
                     </tr>
                     <tr className="border-b">
-                      <td className="border-r p-1 font-medium">
-                        Contact Phone:
-                      </td>
+                      <td className="border-r p-1 font-medium">Contact Phone:</td>
                       <td className="border-r p-1" colSpan={2}></td>
                     </tr>
                     <tr className="border-b">
@@ -162,118 +148,106 @@ export default function WorksheetsPage() {
                       <td className="border-r p-1" colSpan={2}></td>
                     </tr>
                     <tr>
-                      <td className="border-r p-1 font-medium">
-                        Previous or referring Doctor:
-                      </td>
+                      <td className="border-r p-1 font-medium">Previous or referring Doctor:</td>
                       <td className="border-r p-1"></td>
-                      <td className="p-1 font-medium">
-                        Date of last physical exam:
-                      </td>
+                      <td className="p-1 font-medium">Date of last physical exam:</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
-              <div className="text-[10px] mb-4">
+              <div className="mb-4 text-[10px]">
                 <p className="mb-2">
                   <strong>Patient Consent Form / HIPAA Consent Form</strong>
                 </p>
                 <p className="mb-1">
-                  I understand that as part of my healthcare, this practice
-                  originates and maintains health records describing my health
-                  history, symptoms, examination and test results, diagnoses,
-                  treatment, and any plans for future care or treatment.
+                  I understand that as part of my healthcare, this practice originates and maintains
+                  health records describing my health history, symptoms, examination and test
+                  results, diagnoses, treatment, and any plans for future care or treatment.
                 </p>
                 <p className="mb-1">
-                  I understand that this information serves as a basis for
-                  planning my care and treatment, a means of communication among
-                  the many health professionals who contribute to my care, a
-                  source of information for applying my diagnosis and treatment
-                  information to my bill, a means by which a third-party payer
-                  can verify that services billed were actually provided, and a
-                  tool for routine healthcare operations such as assessing
-                  quality and reviewing the competence of healthcare
+                  I understand that this information serves as a basis for planning my care and
+                  treatment, a means of communication among the many health professionals who
+                  contribute to my care, a source of information for applying my diagnosis and
+                  treatment information to my bill, a means by which a third-party payer can verify
+                  that services billed were actually provided, and a tool for routine healthcare
+                  operations such as assessing quality and reviewing the competence of healthcare
                   professionals.
                 </p>
                 <p className="mb-1">
-                  I understand that I have the right to request restrictions as
-                  to how my health information may be used or disclosed to carry
-                  out treatment, payment, or healthcare operations and that the
-                  organization is not required to agree to the restrictions
-                  requested. I understand that I may revoke this consent in
-                  writing, except to the extent that the organization has
-                  already taken action in reliance thereon.
+                  I understand that I have the right to request restrictions as to how my health
+                  information may be used or disclosed to carry out treatment, payment, or
+                  healthcare operations and that the organization is not required to agree to the
+                  restrictions requested. I understand that I may revoke this consent in writing,
+                  except to the extent that the organization has already taken action in reliance
+                  thereon.
                 </p>
                 {/* More consent text would go here */}
               </div>
 
-              <div className="border rounded-md mb-4">
-                <div className="bg-gray-100 p-1 text-center font-medium text-xs">
+              <div className="mb-4 rounded-md border">
+                <div className="bg-gray-100 p-1 text-center text-xs font-medium">
                   PERSONAL HEALTH HISTORY
                 </div>
                 <table className="w-full text-xs">
                   <tbody>
                     <tr className="border-b">
-                      <td className="border-r p-1 w-1/4 font-medium">
-                        Childhood illness:
-                      </td>
+                      <td className="w-1/4 border-r p-1 font-medium">Childhood illness:</td>
                       <td className="p-1">
                         <div className="flex flex-wrap gap-4">
                           <div className="flex items-center gap-1">
-                            <div className="w-3 h-3 border"></div>
+                            <div className="h-3 w-3 border"></div>
                             <span>Measles</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <div className="w-3 h-3 border"></div>
+                            <div className="h-3 w-3 border"></div>
                             <span>Mumps</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <div className="w-3 h-3 border"></div>
+                            <div className="h-3 w-3 border"></div>
                             <span>Rubella</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <div className="w-3 h-3 border"></div>
+                            <div className="h-3 w-3 border"></div>
                             <span>Chickenpox</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <div className="w-3 h-3 border"></div>
+                            <div className="h-3 w-3 border"></div>
                             <span>Rheumatic Fever</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <div className="w-3 h-3 border"></div>
+                            <div className="h-3 w-3 border"></div>
                             <span>Polio</span>
                           </div>
                         </div>
                       </td>
                     </tr>
                     <tr className="border-b">
-                      <td className="border-r p-1 font-medium">
-                        Immunizations and dates:
-                      </td>
+                      <td className="border-r p-1 font-medium">Immunizations and dates:</td>
                       <td className="p-1">
                         <div className="grid grid-cols-2 gap-4">
                           <div className="flex items-center gap-1">
-                            <div className="w-3 h-3 border"></div>
+                            <div className="h-3 w-3 border"></div>
                             <span>Tetanus</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <div className="w-3 h-3 border"></div>
+                            <div className="h-3 w-3 border"></div>
                             <span>Pneumonia</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <div className="w-3 h-3 border"></div>
+                            <div className="h-3 w-3 border"></div>
                             <span>Hepatitis</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <div className="w-3 h-3 border"></div>
+                            <div className="h-3 w-3 border"></div>
                             <span>Chickenpox</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <div className="w-3 h-3 border"></div>
+                            <div className="h-3 w-3 border"></div>
                             <span>Influenza</span>
                           </div>
                           <div className="flex items-center gap-1">
-                            <div className="w-3 h-3 border"></div>
+                            <div className="h-3 w-3 border"></div>
                             <span>MMR</span>
                           </div>
                         </div>
@@ -281,10 +255,9 @@ export default function WorksheetsPage() {
                     </tr>
                     <tr className="border-b">
                       <td className="border-r p-1 font-medium">
-                        List any medical problems that other doctors have
-                        diagnosed:
+                        List any medical problems that other doctors have diagnosed:
                       </td>
-                      <td className="p-1 h-20"></td>
+                      <td className="h-20 p-1"></td>
                     </tr>
                     <tr>
                       <td className="border-r p-1 font-medium">Surgeries:</td>
@@ -292,15 +265,15 @@ export default function WorksheetsPage() {
                         <table className="w-full border text-xs">
                           <thead>
                             <tr className="border-b">
-                              <th className="border-r p-1 w-1/4">Year</th>
-                              <th className="border-r p-1 w-2/5">Reason</th>
+                              <th className="w-1/4 border-r p-1">Year</th>
+                              <th className="w-2/5 border-r p-1">Reason</th>
                               <th className="p-1">Hospital</th>
                             </tr>
                           </thead>
                           <tbody>
                             {[...Array(5)].map((_, i) => (
                               <tr key={i} className="border-b">
-                                <td className="border-r p-1 h-6"></td>
+                                <td className="h-6 border-r p-1"></td>
                                 <td className="border-r p-1"></td>
                                 <td className="p-1"></td>
                               </tr>
@@ -315,16 +288,16 @@ export default function WorksheetsPage() {
             </CardContent>
           </Card>
 
-          <div className="flex justify-center mt-4 items-center gap-2">
-            <div className="flex items-center border rounded-md overflow-hidden">
-              <Button variant="ghost" className="h-8 px-2 rounded-none">
+          <div className="mt-4 flex items-center justify-center gap-2">
+            <div className="flex items-center overflow-hidden rounded-md border">
+              <Button variant="ghost" className="h-8 rounded-none px-2">
                 <span className="text-sm">{zoom}%</span>
                 <ChevronDown className="ml-1 h-4 w-4" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-8 w-8 rounded-none border-l border-r"
+                className="h-8 w-8 rounded-none border-r border-l"
                 onClick={() => setZoom(Math.min(zoom + 10, 100))}
               >
                 <Plus className="h-4 w-4" />
@@ -340,13 +313,13 @@ export default function WorksheetsPage() {
             </div>
           </div>
         </section>
-        <aside className="border-l sticky top-8 hidden w-96 shrink-0 xl:block">
+        <aside className="sticky top-8 hidden w-96 shrink-0 border-l xl:block">
           {/* Right column area */}
           <RightSidebar />
         </aside>
       </div>
     </div>
-  );
+  )
 }
 
 function ChevronRight(props: React.SVGProps<SVGSVGElement>) {
@@ -365,5 +338,5 @@ function ChevronRight(props: React.SVGProps<SVGSVGElement>) {
     >
       <path d="m9 18 6-6-6-6" />
     </svg>
-  );
+  )
 }

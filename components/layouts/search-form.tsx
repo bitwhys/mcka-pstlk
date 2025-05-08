@@ -1,22 +1,22 @@
-import { useId } from "react";
-import { SidebarInput } from "@/components/ui/sidebar";
-import { SidebarGroup, SidebarGroupContent } from "@/components/ui/sidebar";
-import { RiSearch2Line } from "@remixicon/react";
+import { useId } from 'react'
+import { SidebarInput } from '@/components/ui/sidebar'
+import { SidebarGroup, SidebarGroupContent } from '@/components/ui/sidebar'
+import { RiSearch2Line } from '@remixicon/react'
 
-export function SearchForm({ ...props }: React.ComponentProps<"form">) {
-  const id = useId();
+export function SearchForm({ ...props }: React.ComponentProps<'form'>) {
+  const id = useId()
 
   return (
     <form {...props}>
       <SidebarGroup className="py-0">
         <SidebarGroupContent className="relative">
           <div className="relative">
-            <SidebarInput id={id} className="ps-9 pe-9 bg-brand-7" aria-label="Search" />
-            <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-2 text-brand-11 peer-disabled:opacity-50">
+            <SidebarInput id={id} className="bg-brand-7 ps-9 pe-9" aria-label="Search" />
+            <div className="text-brand-11 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-2 peer-disabled:opacity-50">
               <RiSearch2Line size={20} aria-hidden="true" />
             </div>
-            <div className="pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-2 text-muted-foreground">
-              <kbd className="inline-flex size-5 max-h-full items-center justify-center rounded bg-white-a8 px-1 font-[inherit] text-[0.625rem] font-medium text-brand-11">
+            <div className="text-muted-foreground pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-2">
+              <kbd className="bg-white-a8 text-brand-11 inline-flex size-5 max-h-full items-center justify-center rounded px-1 font-[inherit] text-[0.625rem] font-medium">
                 /
               </kbd>
             </div>
@@ -24,5 +24,5 @@ export function SearchForm({ ...props }: React.ComponentProps<"form">) {
         </SidebarGroupContent>
       </SidebarGroup>
     </form>
-  );
+  )
 }

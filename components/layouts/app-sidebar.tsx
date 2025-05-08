@@ -1,8 +1,8 @@
 'use client'
-import * as React from "react";
+import * as React from 'react'
 
-import { SearchForm } from "./search-form";
-import { TeamSwitcher } from "./team-switcher";
+import { SearchForm } from './search-form'
+import { TeamSwitcher } from './team-switcher'
 import {
   Sidebar,
   SidebarContent,
@@ -15,7 +15,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarRail,
-} from "@/components/ui/sidebar";
+} from '@/components/ui/sidebar'
 import {
   RiScanLine,
   RiBardLine,
@@ -26,78 +26,78 @@ import {
   RiSettings3Line,
   RiLeafLine,
   RiLogoutBoxLine,
-} from "@remixicon/react";
-import Link from "next/link";
-import { Separator } from "@/components/ui/separator";
-import { usePathname } from "next/navigation";
+} from '@remixicon/react'
+import Link from 'next/link'
+import { Separator } from '@/components/ui/separator'
+import { usePathname } from 'next/navigation'
 
 // This is sample data.
 const data = {
   teams: [
     {
-      name: "InnovaCraft",
-      logo: "https://res.cloudinary.com/dlzlfasou/image/upload/v1741345507/logo-01_kp2j8x.png",
+      name: 'InnovaCraft',
+      logo: 'https://res.cloudinary.com/dlzlfasou/image/upload/v1741345507/logo-01_kp2j8x.png',
     },
     {
-      name: "Acme Corp.",
-      logo: "https://res.cloudinary.com/dlzlfasou/image/upload/v1741345507/logo-01_kp2j8x.png",
+      name: 'Acme Corp.',
+      logo: 'https://res.cloudinary.com/dlzlfasou/image/upload/v1741345507/logo-01_kp2j8x.png',
     },
     {
-      name: "Evil Corp.",
-      logo: "https://res.cloudinary.com/dlzlfasou/image/upload/v1741345507/logo-01_kp2j8x.png",
+      name: 'Evil Corp.',
+      logo: 'https://res.cloudinary.com/dlzlfasou/image/upload/v1741345507/logo-01_kp2j8x.png',
     },
   ],
   navMain: [
     {
-      title: "Sections",
-      url: "#",
+      title: 'Sections',
+      url: '#',
       items: [
         {
-          title: "Dashboard",
-          url: "/dashboard",
+          title: 'Dashboard',
+          url: '/dashboard',
           icon: RiScanLine,
         },
         {
-          title: "Worksheets",
-          url: "/worksheets",
+          title: 'Worksheets',
+          url: '/worksheets',
           icon: RiBardLine,
         },
         {
-          title: "Submissions",
-          url: "/submissions",
+          title: 'Submissions',
+          url: '/submissions',
           icon: RiUserFollowLine,
           isActive: true,
         },
         {
-          title: "Courses",
-          url: "/courses",
+          title: 'Courses',
+          url: '/courses',
           icon: RiCodeSSlashLine,
         },
         {
-          title: "Progress",
-          url: "/progress",
+          title: 'Progress',
+          url: '/progress',
           icon: RiLoginCircleLine,
         },
       ],
     },
     {
-      title: "Other",
-      url: "#",
+      title: 'Other',
+      url: '#',
       items: [
         {
-          title: "Settings",
-          url: "/settings",
+          title: 'Settings',
+          url: '/settings',
           icon: RiSettings3Line,
         },
         {
-          title: "Help Center",
-          url: "/help-center",
+          title: 'Help Center',
+          url: '/help-center',
           icon: RiLeafLine,
         },
       ],
     },
   ],
-};
+}
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const pathname = usePathname()
@@ -111,21 +111,22 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         {/* We create a SidebarGroup for each parent. */}
-        {data.navMain.map((item) => (
+        {data.navMain.map(item => (
           <SidebarGroup key={item.title}>
-            <SidebarGroupLabel className="uppercase text-white-a8">
-              {item.title}
-            </SidebarGroupLabel>
+            <SidebarGroupLabel className="text-white-a8 uppercase">{item.title}</SidebarGroupLabel>
             <SidebarGroupContent className="px-2">
               <SidebarMenu>
-                {item.items.map((item) => (
+                {item.items.map(item => (
                   <SidebarMenuItem key={item.title}>
                     <SidebarMenuButton
                       asChild
-                      className="group/menu-button font-medium gap-3 h-9 rounded-md bg-gradient-to-r hover:bg-transparent hover:from-sidebar-accent hover:to-sidebar-accent/40 data-[active=true]:from-brand-a11 data-[active=true]:to-brand-a3 [&>svg]:size-auto"
+                      className="group/menu-button hover:from-sidebar-accent hover:to-sidebar-accent/40 data-[active=true]:from-brand-a11 data-[active=true]:to-brand-a3 h-9 gap-3 rounded-md bg-gradient-to-r font-medium hover:bg-transparent [&>svg]:size-auto"
                       isActive={item.url === pathname}
                     >
-                      <Link href={item.url} className="text-brand-6 data-[active=true]:text-white-a12">
+                      <Link
+                        href={item.url}
+                        className="text-brand-6 data-[active=true]:text-white-a12"
+                      >
                         {item.icon && (
                           <item.icon
                             className="text-brand-11 group-data-[active=true]/menu-button:text-white-a12"
@@ -147,7 +148,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <Separator className="bg-(--white-a5)" />
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton className="font-medium gap-3 h-9 rounded-md bg-gradient-to-r hover:bg-transparent hover:from-sidebar-accent hover:to-sidebar-accent/40 data-[active=true]:from-primary/20 data-[active=true]:to-primary/5 [&>svg]:size-auto">
+            <SidebarMenuButton className="hover:from-sidebar-accent hover:to-sidebar-accent/40 data-[active=true]:from-primary/20 data-[active=true]:to-primary/5 h-9 gap-3 rounded-md bg-gradient-to-r font-medium hover:bg-transparent [&>svg]:size-auto">
               <RiLogoutBoxLine
                 className="text-brand-11 group-data-[active=true]/menu-button:text-primary"
                 size={22}
@@ -160,5 +161,5 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
-  );
+  )
 }

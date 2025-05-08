@@ -1,6 +1,6 @@
 'use client'
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,16 +11,16 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { DotFilledIcon } from "@radix-ui/react-icons";
+} from '@/components/ui/dropdown-menu'
+import { DotFilledIcon } from '@radix-ui/react-icons'
 
-import { RiSettingsLine, RiTeamLine, RiLogoutBoxLine } from "@remixicon/react";
-import { ThemeSwitcher } from "../theme-switcher";
-import { DropdownMenuItemIndicator } from "@radix-ui/react-dropdown-menu";
-import { useState } from "react";
+import { RiSettingsLine, RiTeamLine, RiLogoutBoxLine } from '@remixicon/react'
+import { ThemeSwitcher } from '../theme-switcher'
+import { DropdownMenuItemIndicator } from '@radix-ui/react-dropdown-menu'
+import { useState } from 'react'
 
 export default function UserDropdown() {
-  const [person, setPerson] = useState("pedro");
+  const [person, setPerson] = useState('pedro')
 
   return (
     <DropdownMenu>
@@ -39,21 +39,15 @@ export default function UserDropdown() {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="max-w-64" align="end">
         <DropdownMenuLabel className="flex min-w-0 flex-col">
-          <span className="truncate text-sm font-medium text-foreground">
-            Keith Kennedy
-          </span>
-          <span className="truncate text-xs font-normal text-muted-foreground">
+          <span className="text-foreground truncate text-sm font-medium">Keith Kennedy</span>
+          <span className="text-muted-foreground truncate text-xs font-normal">
             k.kennedy@originui.com
           </span>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <RiSettingsLine
-              size={16}
-              className="opacity-60"
-              aria-hidden="true"
-            />
+            <RiSettingsLine size={16} className="opacity-60" aria-hidden="true" />
             <span>Account settings</span>
           </DropdownMenuItem>
           <DropdownMenuItem>
@@ -63,39 +57,27 @@ export default function UserDropdown() {
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <RiLogoutBoxLine
-            size={16}
-            className="opacity-60"
-            aria-hidden="true"
-          />
+          <RiLogoutBoxLine size={16} className="opacity-60" aria-hidden="true" />
           <span>Sign out</span>
         </DropdownMenuItem>
 
         <DropdownMenuSeparator />
-        <DropdownMenuLabel className="DropdownMenuLabel">
-						People
-					</DropdownMenuLabel>
-					<DropdownMenuRadioGroup value={person} onValueChange={setPerson}>
-						<DropdownMenuRadioItem
-							className="DropdownMenuRadioItem"
-							value="pedro"
-						>
-							<DropdownMenuItemIndicator className="DropdownMenuItemIndicator">
-								<DotFilledIcon />
-							</DropdownMenuItemIndicator>
-							Pedro Duarte
-						</DropdownMenuRadioItem>
-						<DropdownMenuRadioItem
-							className="DropdownMenuRadioItem"
-							value="colm"
-						>
-							<DropdownMenuItemIndicator className="DropdownMenuItemIndicator">
-								<DotFilledIcon />
-							</DropdownMenuItemIndicator>
-							Colm Tuite
-						</DropdownMenuRadioItem>
-					</DropdownMenuRadioGroup>
+        <DropdownMenuLabel className="DropdownMenuLabel">People</DropdownMenuLabel>
+        <DropdownMenuRadioGroup value={person} onValueChange={setPerson}>
+          <DropdownMenuRadioItem className="DropdownMenuRadioItem" value="pedro">
+            <DropdownMenuItemIndicator className="DropdownMenuItemIndicator">
+              <DotFilledIcon />
+            </DropdownMenuItemIndicator>
+            Pedro Duarte
+          </DropdownMenuRadioItem>
+          <DropdownMenuRadioItem className="DropdownMenuRadioItem" value="colm">
+            <DropdownMenuItemIndicator className="DropdownMenuItemIndicator">
+              <DotFilledIcon />
+            </DropdownMenuItemIndicator>
+            Colm Tuite
+          </DropdownMenuRadioItem>
+        </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 }

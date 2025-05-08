@@ -1,39 +1,38 @@
 'use client'
-import { useState } from "react";
-import { ChevronDownIcon } from "lucide-react";
+import { useState } from 'react'
+import { ChevronDownIcon } from 'lucide-react'
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from '@/components/ui/dropdown-menu'
 
 const options = [
   {
-    label: "Copy Link",
+    label: 'Copy Link',
     description:
-      "All commits from this branch will be added to the base branch via a commit version.",
+      'All commits from this branch will be added to the base branch via a commit version.',
   },
   {
-    label: "Add collaborators",
+    label: 'Add collaborators',
     description:
-      "The 6 commits from this branch will be combined into one commit in the base branch.",
+      'The 6 commits from this branch will be combined into one commit in the base branch.',
   },
   {
-    label: "Export PDF",
-    description:
-      "The 6 commits from this branch will be rebased and added to the base branch.",
+    label: 'Export PDF',
+    description: 'The 6 commits from this branch will be rebased and added to the base branch.',
   },
-];
+]
 
 export default function ShareButton() {
-  const [selectedIndex, setSelectedIndex] = useState("0");
+  const [selectedIndex, setSelectedIndex] = useState('0')
 
   return (
-    <div className=" inline-flex  rounded-md shadow-xs rtl:space-x-reverse">
+    <div className="inline-flex rounded-md shadow-xs rtl:space-x-reverse">
       <Button
         className="rounded-none first:rounded-s-md last:rounded-e-md focus-visible:z-10"
         variant="outline"
@@ -43,7 +42,7 @@ export default function ShareButton() {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
-            className="rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10 border-l-0"
+            className="rounded-none border-l-0 shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10"
             size="icon"
             aria-label="Options"
             variant="outline"
@@ -57,10 +56,7 @@ export default function ShareButton() {
           sideOffset={4}
           align="end"
         >
-          <DropdownMenuRadioGroup
-            value={selectedIndex}
-            onValueChange={setSelectedIndex}
-          >
+          <DropdownMenuRadioGroup value={selectedIndex} onValueChange={setSelectedIndex}>
             {options.map((option, index) => (
               <DropdownMenuRadioItem
                 key={option.label}
@@ -69,9 +65,7 @@ export default function ShareButton() {
               >
                 <div className="flex flex-col gap-1">
                   <span className="text-sm font-medium">{option.label}</span>
-                  <span className="text-muted-foreground text-xs">
-                    {option.description}
-                  </span>
+                  <span className="text-muted-foreground text-xs">{option.description}</span>
                 </div>
               </DropdownMenuRadioItem>
             ))}
@@ -79,7 +73,7 @@ export default function ShareButton() {
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
-  );
+  )
 }
 
-export { ShareButton };
+export { ShareButton }

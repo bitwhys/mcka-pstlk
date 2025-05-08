@@ -1,10 +1,10 @@
-"use client"
+'use client'
 
-import { useId, useState } from "react"
-import { MoonIcon, SunIcon } from "lucide-react"
+import { useId, useState } from 'react'
+import { MoonIcon, SunIcon } from 'lucide-react'
 
-import { Label } from "@/components/ui/label"
-import { Switch } from "@/components/ui/switch"
+import { Label } from '@/components/ui/label'
+import { Switch } from '@/components/ui/switch'
 
 export const ThemeSwitcher = () => {
   const id = useId()
@@ -12,7 +12,7 @@ export const ThemeSwitcher = () => {
 
   return (
     <div>
-      <div className="relative inline-grid h-8grid-cols-[1fr_1fr] items-center text-sm font-medium">
+      <div className="h-8grid-cols-[1fr_1fr] relative inline-grid items-center text-sm font-medium">
         <Switch
           id={id}
           checked={checked}
